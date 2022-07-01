@@ -1,0 +1,420 @@
+/*
+***********************************
+MEDIA QUERIES
+***********************************
+*/
+/*
+******************************************
+VARIABLES
+******************************************
+*/
+:root {
+  --body-bg: linear-gradient(180deg, #c0d4ab 22%, #506333 100%);
+  --main-color: white;
+  --primary-color: #526535;
+  --semi-transparent: rgba(255, 255, 255, 0.137);
+}
+
+/*
+******************************************
+GENERAL
+******************************************
+*/
+html {
+  overflow: hidden;
+  height: 100vh;
+  background: var(--body-bg);
+}
+
+body {
+  margin: 0;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-decoration: none;
+  color: var(--main-color);
+  font-family: "Montserrat", sans-serif;
+}
+
+a,
+li {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover,
+li:hover {
+  text-decoration: underline;
+}
+
+a:focus,
+li:focus {
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 1em;
+  font-size: 4em;
+  text-shadow: 1px 1px 2px black;
+}
+
+h2 {
+  text-shadow: 1px 1px 2px black;
+  text-align: center;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex .left,
+.flex .right {
+  width: 50%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow-x: hidden;
+}
+
+/*
+******************************************
+SCROLLBAR
+******************************************
+*/
+div::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+div::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: #aab74d;
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.3) 20%, transparent 20%, transparent 40%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0.3) 60%, transparent 60%, transparent 80%, rgba(255, 255, 255, 0.3) 80%);
+  border-radius: 10px;
+}
+
+/*
+******************************************
+FLEX
+******************************************
+*/
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*
+******************************************
+BUTTONS
+******************************************
+*/
+.MuiButton-outlined,
+.MuiButton-root,
+.show-button,
+.shipping-button {
+  color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+}
+
+.shipping-button a,
+.show-button a {
+  color: var(--main-color) !important;
+}
+
+.show-button {
+  margin-left: 6em !important;
+}
+
+.custom-btn {
+  background-color: transparent;
+  outline: none;
+  border: solid 1px var(--main-color);
+  color: var(--main-color) !important;
+  text-transform: uppercase;
+  margin-top: 40px;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.custom-btn:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+input {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid white;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/*
+******************************************
+APP
+******************************************
+*/
+.app {
+  overflow-y: auto;
+  max-width: 65%;
+  margin: auto;
+  border: solid 2px var(--main-color);
+  border-radius: 10px;
+  margin-top: 7%;
+  height: 80vh;
+}
+
+@media (min-width: 300px) and (max-width: 576px) {
+  .app {
+    border: none;
+    max-width: 100%;
+    height: 100vh;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .app {
+    border: none;
+    max-width: 100%;
+    height: 100vh;
+  }
+}
+
+/*
+******************************************
+HOME
+******************************************
+*/
+.home {
+  overflow: hidden;
+  height: 94.9%;
+  background-repeat: repeat;
+  background-size: 30%;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .home {
+    background-image: url("../images/avocado-home.png");
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1280px) {
+  .home {
+    background-image: url("../images/avocado-home.png");
+  }
+}
+
+@media (min-width: 1280px) {
+  .home {
+    background-image: url("../images/avocado-home.png");
+  }
+}
+
+/*
+******************************************
+SPECIALITIES
+******************************************
+*/
+.specialities .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 5em;
+}
+
+.specialities .flex .right {
+  height: 480px;
+  background-image: url("../images/avocado1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+}
+
+.specialities .flex .left h1 {
+  font-size: 3em;
+  padding-left: 1em;
+}
+
+@media (min-width: 300px) and (max-width: 576px) {
+  .specialities .flex .left h1 {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .specialities .flex .left h1 {
+    font-size: 2em;
+  }
+}
+
+/*
+******************************************
+RESTAURANT
+******************************************
+*/
+.resto {
+  height: 73.6vh;
+  background-image: url("../images/resto.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+}
+
+.resto-title {
+  text-align: center;
+  padding-top: 2em;
+}
+
+.paper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  vertical-align: middle;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+/*
+******************************************
+BUY
+******************************************
+*/
+.card {
+  margin: inherit;
+  background-color: var(--semi-transparent) !important;
+}
+
+/*
+******************************************
+CONTACT
+******************************************
+*/
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  margin-top: 3em;
+  font-family: "Montserrat";
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 2em;
+  border-radius: 10px;
+  border: none;
+}
+
+.contact-form input {
+  height: 25px;
+}
+
+.contact-form textarea {
+  height: 200px;
+}
+
+.contact-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 6em;
+}
+
+/*
+******************************************
+FORMS
+******************************************
+*/
+.reservation-form,
+.registration-form,
+.login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  width: 50%;
+}
+
+/*
+******************************************
+BOTTOM APP BAR
+******************************************
+*/
+.bottom-app-bar {
+  outline: none;
+  border-top: 1px solid var(--main-color);
+  width: 65% !important;
+}
+
+@media (min-width: 300px) and (max-width: 576px) {
+  .bottom-app-bar {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .bottom-app-bar {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .bottom-app-bar {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1280px) {
+  .bottom-app-bar {
+    display: none;
+  }
+}
+
+.bottom-app-bar .bottom-app-bar-content {
+  background-color: #c0d4ab00 !important;
+}
+/*# sourceMappingURL=style.css.map */
