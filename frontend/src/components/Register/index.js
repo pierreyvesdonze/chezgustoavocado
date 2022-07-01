@@ -28,7 +28,6 @@ export default function Register() {
     const { errors } = formState
 
     function onSubmit(data) {
-        alert(JSON.stringify(data))
         axios({
             method: 'post',
             url: `http://localhost:8000/api/register`,
