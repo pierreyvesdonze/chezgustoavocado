@@ -25,7 +25,7 @@ export default function MenuRestaurant() {
                 {articles.map((article) => (
                     <div className='article-container'>
                         <h2>{article.title}</h2>
-                        <p>
+                        <p className='p'>
                             {article.description}
                         </p>
                         <h3>
