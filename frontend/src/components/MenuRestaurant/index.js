@@ -20,11 +20,24 @@ export default function MenuRestaurant() {
     return (
         <div>
             <h1>Notre carte</h1>
+            <hr />
             <div className='resto-menu-container'>
                 {articles.map((article) => (
-                    console.log(article)
-
+                    <div className='article-container'>
+                        <h2>{article.title}</h2>
+                        <p>
+                            {article.description}
+                        </p>
+                        <h3>
+                            {article.price} €
+                        </h3>
+                        <hr className='hr-white' />
+                    </div>
                 ))}
+                <br />
+                <br />
+                <br />
+                <br />
             </div>
         </div>
     );
