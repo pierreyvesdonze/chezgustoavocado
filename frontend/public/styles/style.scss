@@ -30,7 +30,7 @@ ul li {
     list-style-type: none;
 }
 
-p.p,
+p,
 h1,
 h2,
 h3,
@@ -220,6 +220,10 @@ HOME
     @include xl {
         background-image: url("../images/avocado-home.png");
     }
+}
+
+.main-title {
+    margin-top: 2em;
 }
 
 /*
